@@ -1,0 +1,17 @@
+header img{margin-top: 6.6%;padding-left: 16%;width: 68.3%;height: 12%;margin-bottom: 6%;}
+
+.input{margin-bottom: 5.3%;}
+input{border: 0.01rem solid #1F81D2;border-radius: 1rem;text-align:center;font-family: PingFangSC-Regular;font-size: 0.16rem;color: #000000;letter-spacing: 0;padding: 3.5% 0;color: #000;line-height: 0.22rem;-webkit-user-select: text;-user-select:text;}
+.input input:nth-child(1){margin-left: 4.8%;width: 90.7%;height: 7.3%;margin-bottom: 2%;}
+.input input:nth-child(2){margin-left: 4.8%;width: 53.3%;height: 7.3%;text-align: center;padding: 3.5% 0;margin-right: 5.3%;float: left;}
+.input button{width: 32%;height: 7.3%;background: #1F81D2;border: 0.01rem solid #1F81D2;border-radius: 1rem;font-family: PingFangSC-Regular;font-size: 0.16rem;color: #FFFFFF;letter-spacing: 0;text-align: center;padding: 3.5% 0;}
+
+.register{margin-left: 4.8%;margin-bottom: 2%;width: 90.7%;height: 7.3%;background: #1F81D2;border: 0 solid #1F81D2;border-radius: 1rem;padding: 3.5% 0;text-align: center;font-family: PingFangSC-Regular;font-size: 0.16rem;color: #FFF;letter-spacing: 0;}
+
+.argeement span{margin-left: 26.7%;font-family: PingFangSC-Regular;font-size: 0.12rem;color: #9B9B9B;letter-spacing: 0;}
+.argeement span a{font-family: PingFangSC-Regular;font-size: 0.12rem;color: #4A90E2;letter-spacing: 0;padding-left: 1.6%;}
+
+footer{margin-top: 1.5rem;}
+footer .nth1{width: 100%;height: 2.7%;}
+footer .nth2{margin: 4% 30.1% 0 25.1%;width: 10.1%;height: 13.3%;}
+footer .nth3{width: 10.1%;height: 13.3%;}
