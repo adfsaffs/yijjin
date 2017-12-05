@@ -14,8 +14,8 @@
 				
 })(document, window);
 //<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	var host="http://47.104.106.175/xb-mer/";
-	var regUrl=host+"MerChants/mergeOrInsert";
+	var host="http://www.xibei.yskjpay.com/xb-mer/";
+	var regUrl=host+"MerChants/mergeOrInsertForHtml";
 	var bindUrl=host+"MerChants/setMerChantsForHtml";
 	var loginUrl =host + "MerChants/login.shtml";
 	var phone="";
@@ -31,25 +31,24 @@
 
 		var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
 		var r = window.location.search.substr(1).match(reg);
-
 		if(r!=null)return  unescape(r[2]); return null;
 	}
 	//时间 
-	function time(o){//o为按钮的对象，p为可选，这里是60秒过后，提示文字的改变 
+	function time(o){//倒计时
 		if (wait == 0){
 			o.disabled = false; 
-			o.innerHTML = '验证码';//改变按钮中value的值 
+			o.innerHTML = '验证码';
 			wait = 60; 
-			
 		}else{
-			o.disabled = true;//倒计时过程中禁止点击按钮 
-			o.innerHTML = wait + "s";//改变按钮中value的值 
+			o.disabled = true;
+			o.innerHTML = wait + "s";
 			wait--; 
 			setTimeout(function(){ 
 				time(document.getElementById('btn'));//循环调用 
 			},1000) 
 		} 
 	}
+	
 	$("#btn").click(function(){
 	  IsTel()
 	});
@@ -68,7 +67,6 @@
 	$("#reg").click(function(){
 	  IsCode()
 	});
-	
 	//document.getElementById('reg').onclick = function(){IsCode(this)}
 	function IsCode(){
         var re2=new RegExp(/^[0-9]{6}$/);
@@ -83,7 +81,7 @@
         	login();
         }
     }
-	
+
 	function toReg(){
 		//看似是发验证码，其实是注册
 		myphone=$("#phone").val();
@@ -95,11 +93,11 @@
 			cache : false,
 			contentType : "application/json;charset=utf-8",
 			processData : false,
-			success : function(data){
+			success : function(data){		
 				merChantId=data.data;	
 			},
 			error : function(data){
-				alert('error:链接服务器失败');
+				alert(data.respDesc);
 			}  
 		});
 	}
@@ -137,9 +135,11 @@
 			processData : false,
 			success : function(data) {
 				if(data.respCode=='0000'){
-					alert('成功')
+					$("#phone").val() == '';
+					$("#code").val() == '';
+					alert('成功');
 				}else{
-					alert('失败')
+					alert(data.respCode)
 				}
 			},
 			error : function(data) {
